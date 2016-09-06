@@ -37,8 +37,8 @@
     		
     		<authentication-provider>
     			<jdbc-user-service data-source-ref="dataSource"
-    				users-by-username-query="select username, password, enabled from users where username=?"
-    				authorities-by-username-query="select username concat('ROLE_',user_role) user_role from user_roles where username=?"/>
+    				users-by-username-query="select USERNAME, PASSWORD, ENABLED from USERS where USERNAME=?"
+    				authorities-by-username-query="select USERNAME, CONCAT('ROLE_',USER_ROLE) as role from USER_ROLES where USERNAME=?"/>
     		</authentication-provider>
     	</authentication-manager>
 
